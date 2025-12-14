@@ -1,37 +1,43 @@
+public class DataTypesSize {
+    public static void main(String[] args) {
 
+        int number = 1234567890;
 
-    public class DataTypesSize{
-        public static void main (String[] args){
+        String stringVariable = "hello";
+        char charVariable = 'h';
+        short shortVariable = 12345;
+        long longVariable = 12345678900000L;
+        byte byteVariable = (byte) 44; // 3444 is too large for byte
 
+        // Floating point
+        float temperature = 36.667f;
+        double gravity = 9.80665;
 
-            int number=1234567890;
-            String stringvariable="hello";
-        
+        // Integers
+        // int population = 8_000_000_000; // Error without L
+        long worldPop = 8_000_000_000L; // correct
 
-            Short shortvariable=12345;
-            Long longvariable=12345678900000L;
-            Byte bytevariable=(byte)344;
+        // Bases
+        int binary = 0b1010;  // 10
+        int octal = 012;      // 10
+        int hexa = 0xA;       // 10 (was "oxA" in your code, needs 0x)
 
-            //floating-point
-            float temprature=36.667f;
-            double gravity=9.80665;
+        // Other types
+        byte small = 127;
+        char grade = 'A';
+        boolean isValid = true;
+        String message = "literals demo";
 
-            //integers
-            //int population=8_000_000_ooo;//error without L;
-            long worldpop=8_000_000_000l;
-
-            //bases
-            int binary=0b1010;  //10
-            int octal=012;     //10
-            int hex=0xA;       //10
-
-            //other types 
-            byte small=(byte) 127;
-            
-            string message="Literals demo";
-
-
-
-        }
+        // Print to check
+        System.out.println("Number: " + number);
+        System.out.println("String: " + stringVariable);
+        System.out.println("Char: " + charVariable);
+        System.out.println("Short: " + shortVariable);
+        System.out.println("Long: " + longVariable);
+        System.out.println("Byte: " + byteVariable);
+        System.out.println("Temperature: " + temperature);
+        System.out.println("Gravity: " + gravity);
+        System.out.println("World Population: " + worldPop);
+        System.out.println("Binary: " + binary)
     }
-
+}
