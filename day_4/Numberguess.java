@@ -1,9 +1,9 @@
-
-public class  Numberguessing {
+import java.util.Scanner;
+public class  Numberguess {
    int num;
    int num2;
 
-   Numberguessing(int num){
+   Numberguess(int num){
     this.num = num;
 
 
@@ -21,11 +21,11 @@ public class  Numberguessing {
             System.out.println("Your number " + num2 + " is greater");
         }
 
-        else if(num2<num){
+        else if (num2<num){
             System.out.println("Your number " + num2 + " is smaller");
         }
       
-      else if(num2 == num){
+      else{
          System.out.println("Your guess is correct ");
         
       }
@@ -34,7 +34,7 @@ public class  Numberguessing {
 
    public static void main(String[] aargs){
  
-     Numberguessing ng = new Numberguessing(5);
+     Numberguessing  ng= new Numberguessing(7);
      ng.check();
 
    }
