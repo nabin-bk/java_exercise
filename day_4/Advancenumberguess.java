@@ -1,45 +1,41 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
- class Guess {
-    static int secrectNumber = 93;
-    static int userInput;
-    static Scanner sc = new Scanner(System.in);
+class Advdncenumberguess {
 
-    Guess(int SecNum, int userInput){
-        secrectNumber = SecNum;
-        this.userInput = userInput;
-    }
-    
-    static void getNumber(){
-        System.out.print("Enter Your Guess Here : ");
-        userInput = sc.nextInt();
-     }
+    public static void main(String[] args) {
 
-     public static void main(String [] args) {
-        boolean working = true;
+        Scanner sc = new Scanner(System.in);
+        int secretNumber = 600;
+        int guess, attempts = 0;
 
-        System.out.println(" Welcome to Number Guessing Game ");
-        System.out.println("----------------------------------");
-        System.out.println("Guess a Number between 1 to 100");
+        System.out.println("Guess the number (0 to 1000)");
 
-        getNumber();
+        while (true) {
+            guess = sc.nextInt();
+            attempts++;
 
-        while(working){
-            if(secrectNumber == userInput){
-                System.out.println("You Guessed it Right");
-                working = false;
-
-            } else if(secrectNumber > userInput){
-                System.out.println("Your Guess is Low");
-                getNumber();
-
-            } else if(secrectNumber < userInput){
-                System.out.println("Your Guess is High");
-                getNumber();
+            if (guess == secretNumber) {
+                System.out.println("Correct!");
+                System.out.println("Attempts: " + attempts);
+                break;
             }
-            else {
-                System.out.println("Invalid Input");
-                getNumber();
+
+            else if (guess > secretNumber + 800) {
+                System.out.println("your number is miles away");
+                
             }
-            
+
+            else if (guess < secretNumber -400 ) {
+                System.out.println("your number is much more away");
+                
+            }
+            if (guess < secretNumber) {
+                System.out.println("Too low");
+            } else {
+                System.out.println("Too high");
+            }
         }
+
+        sc.close();
+    }
+}
